@@ -1,0 +1,47 @@
+type Module {
+  """
+  Generates a random Int within the range [min, max).
+  """
+  nextInt(min: Int, max: Int): Int!
+
+  """
+  Generates a random UInt within the range [min, max).
+  """
+  nextUInt(min: UInt, max: UInt): UInt!
+
+  """
+  Generates a random Float within the range [min, max).
+  """
+  nextFloat(min: Int, max: Int): BigNumber!
+
+  """
+  Generates a random Boolean value.
+  """
+  nextBoolean: Boolean!
+
+  """
+  Generates a random byte sequence of the specified length.
+  """
+  nextBytes(length: Int!): Bytes!
+
+  """
+  Generates a random string of the specified length.
+  """
+  nextString(length: Int!): String!
+
+  """
+  Generates a list of random integers of the given length, each within the range [min, max).
+  """
+  nextInts(length: Int, min: Int, max: Int): [Int!]!
+
+  """
+  Generates an array of randomly sorted integers of the given length.
+  """
+  shuffle(length: Int): [Int!]!
+
+  """
+  Sets the seed of the random number generator for replicable results.
+  """
+  seed(seed: Int!): Boolean!
+}
+
